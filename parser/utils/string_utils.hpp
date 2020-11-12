@@ -42,6 +42,10 @@ public:
 
   // del \" , \' and blanks at the head or end of str
   static std::string TrimQuoted(std::string str) {
+    if (str.size() <= 0) {
+      return str;
+    }
+
     if (str.at(0) == '"' || str.at(0) == '\'') {
       str = str.substr(1);
     }
