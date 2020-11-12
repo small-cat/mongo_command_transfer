@@ -1,0 +1,7 @@
+db.runCommand( { revokeRolesFromRole: "purchaseAgents",
+                 roles: [
+                          "writeOrdersCollection",
+                          "readOrdersCollection"
+                        ],
+                  writeConcern: { w: "majority" , wtimeout: 5000 }
+             } )

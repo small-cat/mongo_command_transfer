@@ -1,0 +1,4 @@
+db.runCommand( { killAllSessions: [
+   { user: "appReader", db: "db1" },
+   { user: "reportWriter", db: "db2" }
+] } )

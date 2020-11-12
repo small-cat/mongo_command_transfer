@@ -1,0 +1,1 @@
+db.adminCommand( { shardCollection: "records.people", key: { zipcode: 1 } } )

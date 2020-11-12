@@ -1,0 +1,19 @@
+db.runCommand(
+    {
+      revokePrivilegesFromRole: "accountRole",
+      privileges:
+        [
+          {
+            resource : {
+                db : "products",
+                collection : "gadgets"
+            },
+            actions : [
+                "find",
+                "update"
+            ]
+          }
+        ],
+      writeConcern: { w: "majority", wtimeout: 5000 }
+    }
+)

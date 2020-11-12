@@ -1,0 +1,7 @@
+db.runCommand( { revokeRolesFromUser: "accountUser01",
+                 roles: [
+                          { role: "read", db: "stock" },
+                          "readWrite"
+                 ],
+                 writeConcern: { w: "majority" }
+             } )

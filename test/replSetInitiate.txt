@@ -1,0 +1,7 @@
+db.runCommand({replSetInitiate: {
+    _id : "my_replica_set",
+     members : [
+         {_id : 0, host : "rs1.example.net:27017"},
+         {_id : 1, host : "rs2.example.net:27017"},
+         {_id : 2, host : "rs3.example.net", arbiterOnly: true}
+     ]}})

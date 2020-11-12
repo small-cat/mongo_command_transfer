@@ -1,0 +1,10 @@
+db.runCommand(
+   {
+     count:'orders',
+     query: {
+              ord_dt: { $gt: new Date('01/01/2012') },
+              status: "D"
+            },
+     hint: { status: 1 }
+   }
+)

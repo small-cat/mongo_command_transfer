@@ -1,0 +1,1 @@
+db.runCommand( { addShard: "repl0/mongodb3.example.net:27327"} )

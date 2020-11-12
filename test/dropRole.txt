@@ -1,0 +1,6 @@
+db.runCommand(
+   {
+     dropRole: "readPrices",
+     writeConcern: { w: "majority" }
+   }
+)

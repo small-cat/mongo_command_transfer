@@ -1,0 +1,6 @@
+db.runCommand(
+    {
+      rolesInfo: { role: "associate", db: "products" },
+      showPrivileges: true
+    }
+)

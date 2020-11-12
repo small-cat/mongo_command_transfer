@@ -1,0 +1,4 @@
+db.runCommand( {
+   usersInfo: [ { user: "Kari", db: "home" }, { user: "Li", db: "myApp" }, "Mike" ],
+   showPrivileges: true
+} )

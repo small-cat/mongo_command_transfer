@@ -1,0 +1,4 @@
+db.runCommand( { killAllSessionsByPattern: [
+   { "uid" : BinData(0,"oBRA45vMY78p1tv6kChjQPTdYsnCHi/kA/fFMZTIV1o=") },
+   { roles: [ { role: "readWrite", db: "test" } ] }
+] } )

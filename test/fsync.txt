@@ -1,0 +1,1 @@
+db.adminCommand( { fsync: 1, lock: true } )

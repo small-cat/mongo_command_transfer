@@ -1,0 +1,9 @@
+db.runCommand(
+   {
+     find: "restaurants",
+     filter: { rating: { $gte: 9 }, cuisine: "italian" },
+     projection: { name: 1, rating: 1, address: 1 },
+     sort: { name: 1 },
+     limit: 5
+   }
+)

@@ -1,0 +1,1 @@
+db.runCommand( { serverStatus: 1, repl: 0, metrics: 0, locks: 0 } )

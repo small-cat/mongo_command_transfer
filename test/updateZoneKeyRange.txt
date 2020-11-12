@@ -1,0 +1,8 @@
+admin.runCommand(
+   {
+      updateZoneKeyRange : "exampledb.collection",
+      min : { a : 1 },
+      max : { a : 10 },
+      zone : "alpha"
+   }
+)

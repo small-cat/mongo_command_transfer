@@ -1,0 +1,1 @@
+db.adminCommand( { split : "test.people", find : { _id : 99 } } )

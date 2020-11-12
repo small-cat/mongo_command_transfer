@@ -1,0 +1,1 @@
+db.runCommand( { listCollections: 1.0, authorizedCollections: true, nameOnly: true } )

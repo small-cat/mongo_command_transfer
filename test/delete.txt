@@ -1,0 +1,7 @@
+db.runCommand(
+   {
+      delete: "orders",
+      deletes: [ { q: { status: "D" }, limit: 0 } ],
+      writeConcern: { w: "majority", wtimeout: 5000 }
+   }
+)

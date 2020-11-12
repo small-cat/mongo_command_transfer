@@ -1,0 +1,1 @@
+db.runCommand({ rolesInfo: 1, showBuiltinRoles: true })

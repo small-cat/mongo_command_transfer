@@ -1,0 +1,10 @@
+db.runCommand(
+               {
+                 mapReduce: "orders",
+                 map: mapFunction,
+                 reduce: reduceFunction,
+                 finalize: finalizeFunction2,
+                 out: { merge: "map_reduce_example2" },
+                 query: { ord_date: { $gte: new Date("2020-03-01") } }
+               }
+             )

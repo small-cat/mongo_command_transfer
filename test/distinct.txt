@@ -1,0 +1,1 @@
+db.runCommand ( { distinct: "inventory", key: "item.sku", query: { dept: "A"} } )

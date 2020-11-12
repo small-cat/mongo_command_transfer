@@ -1,0 +1,9 @@
+db.runCommand(
+   {
+     findAndModify: "people",
+     query: { name: "Andy" },
+     sort: { rating: 1 },
+     update: { $inc: { score: 1 } },
+     upsert: true
+   }
+ )

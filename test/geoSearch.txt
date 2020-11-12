@@ -1,0 +1,7 @@
+db.runCommand({
+   geoSearch : "places",
+   near: [ -73.9667, 40.78 ],
+   maxDistance : 6,
+   search : { type : "restaurant" },
+   limit : 30
+})

@@ -1,0 +1,1 @@
+db.adminCommand( { balancerStop: 1, maxTimeMS: 1000 } )

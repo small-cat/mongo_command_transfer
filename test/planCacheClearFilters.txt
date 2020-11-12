@@ -1,0 +1,7 @@
+db.runCommand(
+   {
+      planCacheClearFilters: "orders",
+      query: { "status" : "P" },
+      projection: {}
+   }
+)

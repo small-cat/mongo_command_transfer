@@ -1,0 +1,5 @@
+db.runCommand({
+moveChunk:"records.people",
+find: {zipcode: "53187"}, 
+to: "shard0019"
+    })

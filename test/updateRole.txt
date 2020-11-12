@@ -1,0 +1,17 @@
+db.adminCommand(
+   {
+     updateRole: "myClusterwideAdmin",
+     privileges:
+         [
+           {
+             resource: { db: "", collection: "" },
+             actions: [ "find" , "update", "insert", "remove" ]
+           }
+         ],
+     roles:
+         [
+           { role: "dbAdminAnyDatabase", db: "admin" }
+         ],
+     writeConcern: { w: "majority" }
+   }
+)

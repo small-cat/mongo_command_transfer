@@ -1,0 +1,4 @@
+db.adminCommand( {
+   replSetGetConfig: 1,
+   commitmentStatus: true
+} );

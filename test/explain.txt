@@ -1,0 +1,6 @@
+db.runCommand(
+   {
+     explain: { count: "products", query: { quantity: { $gt: 50 } } },
+     verbosity: "queryPlanner"
+   }
+)

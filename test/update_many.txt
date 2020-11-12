@@ -1,0 +1,15 @@
+db.runCommand(
+   {
+      update: "members",
+      updates: [
+         {
+           q: { member: "abc123" }, u: { $set: { status: "A" }, $inc: { points: 1 } }
+         },
+         {
+           q: { member: "abc123" }, u: { $set: { status: "A" }, $inc: { points: 1 } }, multi: true
+         }
+      ],
+      ordered: false,
+      writeConcern: { w: "majority", wtimeout: 5000 }
+   }
+)

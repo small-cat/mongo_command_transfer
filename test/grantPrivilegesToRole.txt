@@ -1,0 +1,15 @@
+use products
+db.runCommand(
+   {
+     grantPrivilegesToRole: "service",
+     privileges: [
+         {
+           resource: { db: "products", collection: "" }, actions: [ "find" ]
+         },
+         {
+           resource: { db: "products", collection: "system.js" }, actions: [ "find" ]
+         }
+     ],
+     writeConcern: { w: "majority" , wtimeout: 5000 }
+   }
+)

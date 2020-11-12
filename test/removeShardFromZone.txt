@@ -1,0 +1,1 @@
+db.adminCommand( { removeShardFromZone : "shard0000" , zone : "NYC" } )

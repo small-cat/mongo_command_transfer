@@ -1,0 +1,1 @@
+db.runCommand( { create: "collection", capped: true, size: 64 * 1024 } )

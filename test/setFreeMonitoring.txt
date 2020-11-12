@@ -1,0 +1,1 @@
+db.adminCommand( { setFreeMonitoring: 1, action: "enable" } )

@@ -1,0 +1,3 @@
+db.runCommand( {
+   collMod: "myView", viewOn: "activities", pipeline: [ { $match: { status: "Q" } }, { $project: { user: 1, date: 1, description: 1} } ]
+} )

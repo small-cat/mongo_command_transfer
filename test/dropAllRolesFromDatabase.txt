@@ -1,0 +1,6 @@
+db.runCommand(
+   {
+     dropAllRolesFromDatabase: 1,
+     writeConcern: { w: "majority" }
+   }
+)

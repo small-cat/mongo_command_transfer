@@ -1,0 +1,9 @@
+db.runCommand( {
+   aggregate: "articles",
+   pipeline: [
+      { $project: { tags: 1, name: 1, sex:1 } },
+      { $unwind: "$tags" },
+      { $group: { _id: "$tags", count: { $sum : 1 } } }
+   ],
+   cursor: { }
+} )

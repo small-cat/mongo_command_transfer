@@ -1,0 +1,5 @@
+db.runCommand({
+  abortTransaction: 1,
+  txnNumber: 123123123123123,
+  autocommit: false
+})

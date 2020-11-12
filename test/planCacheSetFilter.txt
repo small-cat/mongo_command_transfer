@@ -1,0 +1,10 @@
+db.runCommand(
+   {
+      planCacheSetFilter: "orders",
+      query: { status: "A" },
+      indexes: [
+         { cust_id: 1, status: 1 },
+         { status: 1, order_date: -1 }
+      ]
+   }
+)
