@@ -5,13 +5,7 @@
 
 namespace mongo_parser {
 GetOperateInfoFromAst::GetOperateInfoFromAst(Value* val) : value_(val) {}
-GetOperateInfoFromAst::~GetOperateInfoFromAst() {
-  if (value_ != nullptr) {
-    delete value_;
-  }
-
-  value_ = nullptr;
-}
+GetOperateInfoFromAst::~GetOperateInfoFromAst() {}
 
 OperateInfo GetOperateInfoFromAst::operate_info() {
   return operate_info_;

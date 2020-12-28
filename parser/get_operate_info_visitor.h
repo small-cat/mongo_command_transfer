@@ -38,6 +38,7 @@ private:
   antlr4::TokenStream* tokens_;
 
   std::vector<FunctionDef*> functions_;
+  ValueTracker tracker_;
 };
 } /* end mongo_parser */
 

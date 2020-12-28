@@ -13,17 +13,7 @@ MapValue::MapValue(std::string key, Value* val) {
   class_type_ = Value::ClassType::MAP;
 }
 
-MapValue::~MapValue() {
-  for (auto iter = value_.begin(); iter != value_.end(); iter++) {
-    if (nullptr != iter->second) {
-      delete iter->second;
-      iter->second = nullptr;
-    }
-  }
-
-  value_.clear();
-  keys_.clear();
-}
+MapValue::~MapValue() {}
 
 Value* MapValue::GetValue(std::string k) {
   auto search = value_.find(k);

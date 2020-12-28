@@ -7,7 +7,7 @@ Interpreter::Interpreter(mongo_parser::Value* ast) : ast_(ast) {
 }
 
 Interpreter::~Interpreter() {
-  if (command_ == nullptr) {
+  if (command_ != nullptr) {
     delete command_;
   }
 

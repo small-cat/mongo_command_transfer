@@ -9,9 +9,8 @@ ListValue::ListValue() {
 ListValue::~ListValue() {
   if (nullptr != map_) {
     delete map_;
+    map_ = nullptr;
   }
-
-  map_ = nullptr;
 }
 
 void ListValue::AddValue(std::string key, Value* val) {

@@ -5,14 +5,7 @@ ArrayValue::ArrayValue() {
   class_type_ = Value::ClassType::ARRAY;
 }
 
-ArrayValue::~ArrayValue() {
-  for (auto& val : value_) {
-    delete val;
-    val = nullptr;
-  }
-
-  value_.clear();
-}
+ArrayValue::~ArrayValue() {}
 
 void ArrayValue::AddValue(Value* val) {
   value_.push_back(val);

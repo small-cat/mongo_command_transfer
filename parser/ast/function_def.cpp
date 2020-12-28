@@ -4,14 +4,7 @@ namespace mongo_parser {
 FunctionDef::FunctionDef() {}
 FunctionDef::FunctionDef(std::string name) : function_name_(name) {}
 
-FunctionDef::~FunctionDef() {
-  for (auto& arg : args_) {
-    delete arg;
-    arg = nullptr;
-  }
-
-  args_.clear();
-}
+FunctionDef::~FunctionDef() {}
 
 void FunctionDef::SetFunctionName(std::string name) {
   function_name_ = name;
